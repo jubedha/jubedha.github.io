@@ -28,8 +28,6 @@
             text-decoration: none;
         }
 
-        /* Navigation */
-
         header {
             background: #102f56;
             color: white;
@@ -61,8 +59,6 @@
         nav a:hover {
             color: #82c5ff;
         }
-
-        /* Hero */
 
         .hero {
             background: linear-gradient(135deg, #e7f1ff, #c9def8);
@@ -118,8 +114,6 @@
             color: white;
         }
 
-        /* Common Sections */
-
         section {
             padding: 75px 10%;
         }
@@ -131,8 +125,6 @@
             margin-bottom: 35px;
         }
 
-        /* About */
-
         .about {
             max-width: 850px;
             margin: auto;
@@ -143,8 +135,6 @@
             color: #526276;
             font-size: 16px;
         }
-
-        /* Skills */
 
         .skills {
             background: #eaf2fc;
@@ -169,26 +159,24 @@
         /* Projects */
 
         .project-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
+            max-width: 1050px;
+            margin: auto;
         }
 
         .project-card {
             background: white;
-            border-radius: 10px;
-            padding: 27px;
+            border-radius: 12px;
+            padding: 30px;
             box-shadow: 0 4px 15px #102f5615;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
         }
 
         .project-card h3 {
             color: #1764a5;
-            margin-bottom: 12px;
+            margin: 25px 0 12px;
+        }
+
+        .project-card h3:first-child {
+            margin-top: 0;
         }
 
         .project-card p {
@@ -198,21 +186,64 @@
 
         .project-tools {
             color: #1764a5;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: bold;
-            margin: 15px 0;
+            margin: 15px 0 25px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 20px 0 30px;
+        }
+
+        .dashboard-item {
+            background: #f5f8fd;
+            border-radius: 9px;
+            padding: 12px;
+            overflow: hidden;
+        }
+
+        .dashboard-item h4 {
+            color: #102f56;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .dashboard-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .dashboard-item img:hover {
+            transform: scale(1.02);
+        }
+
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .project-link {
+            display: block;
+            background: #edf4fc;
+            padding: 12px 15px;
+            border-radius: 6px;
             color: #1764a5;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .project-link:hover {
-            text-decoration: underline;
+            background: #d9eaff;
+            color: #102f56;
         }
-
-        /* Experience */
 
         .experience {
             background: #eaf2fc;
@@ -235,8 +266,6 @@
             color: #526276;
         }
 
-        /* Contact */
-
         .contact {
             text-align: center;
         }
@@ -250,8 +279,6 @@
             color: #1764a5;
         }
 
-        /* Footer */
-
         footer {
             background: #102f56;
             color: white;
@@ -259,8 +286,6 @@
             padding: 25px;
             font-size: 14px;
         }
-
-        /* Mobile */
 
         @media (max-width: 700px) {
             header {
@@ -283,6 +308,10 @@
 
             section {
                 padding: 55px 7%;
+            }
+
+            .project-card {
+                padding: 18px;
             }
         }
     </style>
@@ -338,7 +367,6 @@
     <h2 class="section-title">About Me</h2>
 
     <div class="about">
-
         <p>
             I am an Application Management professional
             with 2.4 years of experience as an
@@ -357,7 +385,6 @@
             insights and contribute to data-driven
             business decisions.
         </p>
-
     </div>
 
 </section>
@@ -371,19 +398,12 @@
     <div class="skill-container">
 
         <div class="skill-card">Microsoft Excel</div>
-
         <div class="skill-card">MySQL</div>
-
         <div class="skill-card">Power BI</div>
-
         <div class="skill-card">DAX</div>
-
         <div class="skill-card">Power Query</div>
-
         <div class="skill-card">Python - Learning</div>
-
         <div class="skill-card">Data Cleaning</div>
-
         <div class="skill-card">Data Visualization</div>
 
     </div>
@@ -403,25 +423,187 @@
             <h3>IT Support Helpdesk Data Analysis</h3>
 
             <p>
-                An end-to-end data analysis project
-                involving 500 IT support incidents.
-                Analyzed incident trends, resolution
-                performance, SLA compliance and
-                customer satisfaction.
+                An end-to-end data analytics project involving
+                500 IT support incidents. The project focuses
+                on incident trends, resolution performance,
+                SLA compliance and customer satisfaction.
             </p>
 
             <p class="project-tools">
-                Excel | MySQL | Power BI
+                Tools Used: Microsoft Excel | MySQL | Power BI
             </p>
 
-            <a
-                class="project-link"
-                href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis"
-                target="_blank"
-                rel="noopener noreferrer">
+            <!-- Excel Dashboard -->
 
-                View Project on GitHub →
-            </a>
+            <h3>Excel Dashboard</h3>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-item">
+                    <h4>IT Support Excel Dashboard</h4>
+
+                    <a href="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Excel_Dashboard.png"
+                       target="_blank" rel="noopener noreferrer">
+
+                        <img
+                            src="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Excel_Dashboard.png"
+                            alt="IT Support Excel Dashboard">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Power BI Dashboards -->
+
+            <h3>Power BI Dashboards</h3>
+
+            <p>
+                Interactive dashboards developed to analyze
+                incident performance, customer satisfaction,
+                SLA compliance and team performance.
+            </p>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-item">
+                    <h4>1. Executive Overview</h4>
+
+                    <a href="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Executive_Overview.png"
+                       target="_blank" rel="noopener noreferrer">
+
+                        <img
+                            src="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Executive_Overview.png"
+                            alt="Power BI Executive Overview Dashboard">
+                    </a>
+                </div>
+
+                <div class="dashboard-item">
+                    <h4>2. Customer Satisfaction Analysis</h4>
+
+                    <a href="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Customer_Satisfaction_Analysis.png"
+                       target="_blank" rel="noopener noreferrer">
+
+                        <img
+                            src="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Customer_Satisfaction_Analysis.png"
+                            alt="Customer Satisfaction Analysis Dashboard">
+                    </a>
+                </div>
+
+                <div class="dashboard-item">
+                    <h4>3. SLA and Resolution Analysis</h4>
+
+                    <a href="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/SLA_and_Resolution_Analysis.png"
+                       target="_blank" rel="noopener noreferrer">
+
+                        <img
+                            src="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/SLA_and_Resolution_Analysis.png"
+                            alt="SLA and Resolution Analysis Dashboard">
+                    </a>
+                </div>
+
+                <div class="dashboard-item">
+                    <h4>4. Team Performance Analysis</h4>
+
+                    <a href="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Team_Performance_Analysis.png"
+                       target="_blank" rel="noopener noreferrer">
+
+                        <img
+                            src="https://raw.githubusercontent.com/jubedha/IT-Support-Helpdesk-Analysis/main/Team_Performance_Analysis.png"
+                            alt="Team Performance Analysis Dashboard">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Project Documentation -->
+
+            <h3>Project Documentation</h3>
+
+            <div class="resource-list">
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/IT_SERVICE_DESK_%5E0_%20INCIDENT_MANAGEMENT_ANALYSIS.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    View Project Documentation (PDF) →
+                </a>
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/KPI_Results_and_Business_Insights.txt"
+                   target="_blank" rel="noopener noreferrer">
+                    KPI Results and Business Insights →
+                </a>
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis"
+                   target="_blank" rel="noopener noreferrer">
+                    View Complete GitHub Project →
+                </a>
+
+            </div>
+
+            <!-- SQL Analysis -->
+
+            <h3>SQL Analysis and Queries</h3>
+
+            <p>
+                SQL queries covering data exploration,
+                data cleaning, basic, intermediate and
+                advanced analysis, and KPI calculations.
+            </p>
+
+            <div class="resource-list">
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/01_Data_Exploration.sql"
+                   target="_blank" rel="noopener noreferrer">
+                    01. Data Exploration →
+                </a>
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/02_Data%20cleaning%20and%20validation.sql"
+                   target="_blank" rel="noopener noreferrer">
+                    02. Data Cleaning and Validation →
+                </a>
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/03_Basic_Analysis.sql"
+                   target="_blank" rel="noopener noreferrer">
+                    03. Basic Analysis →
+                </a>
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/04_Intermediate_Analysis.sql"
+                   target="_blank" rel="noopener noreferrer">
+                    04. Intermediate Analysis →
+                </a>
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/05_Advanced_Analysis.sql"
+                   target="_blank" rel="noopener noreferrer">
+                    05. Advanced Analysis →
+                </a>
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/06_KPI_Analysis.sql"
+                   target="_blank" rel="noopener noreferrer">
+                    06. KPI Analysis →
+                </a>
+
+            </div>
+
+            <!-- Power BI File -->
+
+            <h3>Power BI Project File</h3>
+
+            <div class="resource-list">
+
+                <a class="project-link"
+                   href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis/blob/main/IT_Service_Desk_Incident_Analysis.pbix"
+                   target="_blank" rel="noopener noreferrer">
+                    View / Download Power BI File →
+                </a>
+
+            </div>
 
         </div>
 
@@ -474,20 +656,16 @@
 
     <p>
         <strong>LinkedIn:</strong>
-        <a
-            href="https://www.linkedin.com/in/beejapur-shaik-jubedha-394138212"
-            target="_blank"
-            rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/beejapur-shaik-jubedha-394138212"
+           target="_blank" rel="noopener noreferrer">
             Visit My LinkedIn Profile
         </a>
     </p>
 
     <p>
         <strong>GitHub:</strong>
-        <a
-            href="https://github.com/jubedha"
-            target="_blank"
-            rel="noopener noreferrer">
+        <a href="https://github.com/jubedha"
+           target="_blank" rel="noopener noreferrer">
             Visit My GitHub Profile
         </a>
     </p>
