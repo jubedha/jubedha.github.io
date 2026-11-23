@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jubedha Beejapur Shaik | Data Analyst Portfolio</title>
+
+    <meta name="description" content="Portfolio of Jubedha Beejapur Shaik, showcasing Data Analytics projects using Excel, MySQL and Power BI.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fd;
+            color: #26364a;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Navigation */
+
+        header {
+            background: #102f56;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #82c5ff;
+        }
+
+        /* Hero */
+
+        .hero {
+            background: linear-gradient(135deg, #e7f1ff, #c9def8);
+            padding: 105px 10%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 43px;
+            color: #102f56;
+            margin-bottom: 12px;
+        }
+
+        .hero h2 {
+            color: #1764a5;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #42566e;
+        }
+
+        .buttons {
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1764a5;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            margin: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #102f56;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #1764a5;
+            border: 2px solid #1764a5;
+        }
+
+        .btn-outline:hover {
+            color: white;
+        }
+
+        /* Common Sections */
+
+        section {
+            padding: 75px 10%;
+        }
+
+        .section-title {
+            color: #102f56;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        /* About */
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: #526276;
+            font-size: 16px;
+        }
+
+        /* Skills */
+
+        .skills {
+            background: #eaf2fc;
+        }
+
+        .skill-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 22px;
+            text-align: center;
+            border-radius: 9px;
+            font-weight: bold;
+            color: #1764a5;
+            box-shadow: 0 3px 12px #102f5610;
+        }
+
+        /* Projects */
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 27px;
+            box-shadow: 0 4px 15px #102f5615;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #1764a5;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #526276;
+            margin-bottom: 12px;
+        }
+
+        .project-tools {
+            color: #1764a5;
+            font-size: 13px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .project-link {
+            color: #1764a5;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Experience */
+
+        .experience {
+            background: #eaf2fc;
+        }
+
+        .experience-card {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-left: 5px solid #1764a5;
+            border-radius: 8px;
+        }
+
+        .experience-card h3 {
+            color: #102f56;
+        }
+
+        .experience-card p {
+            color: #526276;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .contact a {
+            color: #1764a5;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #102f56;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 13px;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<header>
+    <div class="logo">Jubedha | Portfolio</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Home -->
+
+<section class="hero" id="home">
+
+    <h1>Jubedha Beejapur Shaik</h1>
+
+    <h2>Aspiring Data Analyst</h2>
+
+    <p>
+        Passionate about transforming raw data into
+        meaningful insights through data analysis,
+        visualization and problem-solving.
+        Exploring Excel, SQL and Power BI to support
+        data-driven business decisions.
+    </p>
+
+    <div class="buttons">
+        <a href="#projects" class="btn">Explore My Projects</a>
+
+        <a href="#contact" class="btn btn-outline">
+            Contact Me
+        </a>
+    </div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am an Application Management professional
+            with 2.4 years of experience as an
+            Application Management Associate.
+
+            My professional experience includes
+            application support, incident management,
+            troubleshooting and change management.
+
+            I am currently developing my expertise in
+            Data Analytics, with hands-on experience
+            working on projects using Microsoft Excel,
+            MySQL and Power BI.
+
+            My goal is to transform data into actionable
+            insights and contribute to data-driven
+            business decisions.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Skills -->
+
+<section class="skills" id="skills">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skill-container">
+
+        <div class="skill-card">Microsoft Excel</div>
+
+        <div class="skill-card">MySQL</div>
+
+        <div class="skill-card">Power BI</div>
+
+        <div class="skill-card">DAX</div>
+
+        <div class="skill-card">Power Query</div>
+
+        <div class="skill-card">Python - Learning</div>
+
+        <div class="skill-card">Data Cleaning</div>
+
+        <div class="skill-card">Data Visualization</div>
+
+    </div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-container">
+
+        <div class="project-card">
+
+            <h3>IT Support Helpdesk Data Analysis</h3>
+
+            <p>
+                An end-to-end data analysis project
+                involving 500 IT support incidents.
+                Analyzed incident trends, resolution
+                performance, SLA compliance and
+                customer satisfaction.
+            </p>
+
+            <p class="project-tools">
+                Excel | MySQL | Power BI
+            </p>
+
+            <a
+                class="project-link"
+                href="https://github.com/jubedha/IT-Support-Helpdesk-Analysis"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                View Project on GitHub →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Experience -->
+
+<section class="experience" id="experience">
+
+    <h2 class="section-title">Professional Experience</h2>
+
+    <div class="experience-card">
+
+        <h3>Application Management Associate</h3>
+
+        <p><strong>Alight Solutions</strong></p>
+
+        <p>2.4 Years of Experience</p>
+
+        <p>
+            Experience in application support,
+            incident management, troubleshooting,
+            change management and SLA-driven
+            issue resolution.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Get In Touch</h2>
+
+    <p>
+        Interested in connecting or discussing
+        data analytics opportunities?
+    </p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:beejapurshaikjubedha@gmail.com">
+            beejapurshaikjubedha@gmail.com
+        </a>
+    </p>
+
+    <p>
+        <strong>LinkedIn:</strong>
+        <a
+            href="https://www.linkedin.com/in/beejapur-shaik-jubedha-394138212"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit My LinkedIn Profile
+        </a>
+    </p>
+
+    <p>
+        <strong>GitHub:</strong>
+        <a
+            href="https://github.com/jubedha"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit My GitHub Profile
+        </a>
+    </p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        © 2026 Jubedha Beejapur Shaik.
+        All Rights Reserved.
+    </p>
+
+    <p>Data Analyst Portfolio</p>
+
+</footer>
+
+</body>
+</html>
